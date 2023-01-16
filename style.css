@@ -1,0 +1,32 @@
+.h1 {
+    margin: 0 auto;
+    display:flex;
+    justify-content: space-evenly;
+}
+
+.h3 {
+    margin: 0 auto;
+    display:flex;
+    justify-content: space-evenly;
+}
+
+#formulario {
+    margin: 0 auto;
+    max-width: 80vw;
+}
+
+.productos {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.btnform {
+    margin: 0 auto;
+    max-width: 80vw;
+
+}
