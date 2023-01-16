@@ -3,7 +3,7 @@ let nombre = document.querySelector("#nombre");
 let email = document.querySelector("#email");
 let formulario = document.querySelector("#formulario");
 let infoForm = document.querySelector(".infoForm");
-const sectionProductos = document.querySelector("#contenedor")
+
 
 nombre.addEventListener("input", function(){
     if(nombre.value === ""){
@@ -26,6 +26,25 @@ const mostrarInfoForm = formulario.addEventListener("submit", function (evento){
     `;
 });
 
+//Seccion de productos
+
+const sectionProductos = document.querySelector("#contenedor")
+
 fetch("./data.json")
 .then((resp) => resp.json())
-.then((data) => console.log(data))
+.then((data) => {
+    data.forEach((prod) => {
+        const div = document.createElement("div")
+        div.innerHTML = `
+        <div class="card" style="width: 18rem">
+        <div class="card-body">
+          <h5 class="card-title">${prod.nombre}</h5>
+          <p class="card-text">${prod.descripcion}</p>
+          <p class="card-text">${prod.precio}</p>
+          <button class="btn btn-primary" id="cardBotton">Comprar</button>
+        </div>
+      </div>        
+        `
+        sectionProductos.append(div)
+    })
+})

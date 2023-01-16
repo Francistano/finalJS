@@ -1,8 +1,8 @@
 [
-    {"id":1, "nombre":"Hamburguesa",  "precio": 15, "img": "../img/seeds.jpg" },
-    {"id":2, "nombre":"Milanesa",  "precio": 25, "img": "../img/joystick.jpg" },
-    {"id":3, "nombre":"Superpancho",  "precio": 10, "img": "../img/bong.jpg" },
-    {"id":4, "nombre":"Papas Fritas",  "precio": 5, "img": "../img/pipa.jpg" },
-    {"id":5, "nombre":"Choripan",  "precio": 50, "img": "../img/luzLed.jpg" },
-    {"id":6, "nombre":"Pizza",  "precio": 12, "img": "../img/remera.jpg" }
+    {"id":1, "nombre":"Hamburguesa",  "precio": 15, "descripcion": "Un disco de carne vacuna molida entre 2 panes redondeos espolvoreados con semillas de sesamo."},
+    {"id":2, "nombre":"Milanesa",  "precio": 25, "descripcion": "Una feta de carne vacuna ensobrado en huevo agitado y astillas de pan." },
+    {"id":3, "nombre":"Superpancho",  "precio": 10, "descripcion": "Cilindro de carne de diversas fuentes embuelto en un pan alargado." },
+    {"id":4, "nombre":"Papas Fritas",  "precio": 5, "descripcion": "agregar" },
+    {"id":5, "nombre":"Choripan",  "precio": 50, "descripcion": "agregar" },
+    {"id":6, "nombre":"Pizza",  "precio": 12, "descripcion": "agregar" }
 ]
