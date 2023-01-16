@@ -3,6 +3,7 @@ let nombre = document.querySelector("#nombre");
 let email = document.querySelector("#email");
 let formulario = document.querySelector("#formulario");
 let infoForm = document.querySelector(".infoForm");
+const sectionProductos = document.querySelector("#contenedor")
 
 nombre.addEventListener("input", function(){
     if(nombre.value === ""){
@@ -24,3 +25,7 @@ const mostrarInfoForm = formulario.addEventListener("submit", function (evento){
     </div>
     `;
 });
+
+fetch("./data.json")
+.then((resp) => resp.json())
+.then((data) => console.log(data))
