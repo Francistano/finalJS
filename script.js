@@ -88,12 +88,12 @@ const mostrarInfoForm = formulario.addEventListener("submit", function (evento){
     }
 
     
-    const eliminarDeCarrito = (prodId) => {
-        const item = carrito.find((prod) => prod.id === prodId)
-        const indice = carrito.indexOf(item)
-        carrito.splice(indice, 1)
+    const eliminarDeCarrito = (prods) => {
+        const item = prodCarrito.find((prod) => prod.id === prods)
+        const indice = prodCarrito.indexOf(item)
+        prodCarrito.splice(indice, 1)
         actualizarCarrito()
     }
-    console.log(prodId)
+    console.log(prod)
 
     carrito.addEventListener("click", eliminarDeCarrito);
