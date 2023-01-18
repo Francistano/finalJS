@@ -28,23 +28,35 @@ const mostrarInfoForm = formulario.addEventListener("submit", function (evento){
 
 //Seccion de productos
 
-const sectionProductos = document.querySelector("#contenedor")
+ const sectionProductos = document.querySelector("#contenedor")
 
-fetch("./data.json")
-.then((resp) => resp.json())
-.then((data) => {
-    data.forEach((prod) => {
-        const div = document.createElement("div")
-        div.innerHTML = `
+ fetch("./data.json")
+ .then((resp) => resp.json())
+ .then((data) => mostrarProds(data))
+
+ function mostrarProds (prods){
+    prods.forEach(prod => {
+        const card = document.createElement('div');
+        card.innerHTML = `
         <div class="card" style="width: 18rem">
-        <div class="card-body">
-          <h5 class="card-title">${prod.nombre}</h5>
-          <p class="card-text">${prod.descripcion}</p>
-          <p class="card-text">${prod.precio}</p>
-          <button class="btn btn-primary" id="cardBotton">Comprar</button>
+            <div class="card-body">
+                <h5 class="card-title">${prod.nombre}</h5>
+                <p class="card-text des">${prod.descripcion}</p>
+                <p class="card-text pre">${prod.precio}</p>
+                <button class="btn btn-primary btnComprar" id="btn${prod.id}">Comprar</button>
+            </div>
         </div>
-      </div>        
-        `
-        sectionProductos.append(div)
+      `
+        sectionProductos.appendChild(card);
+    });
+    const botonesComprar = document.querySelectorAll('.btncomprar');
+    botonesComprar.forEach(btn => {
+        btn.addEventListener('click', (e)=> agregarAlCarrito(e, prods));
+
     })
-})
+ }
+
+ function agregarAlCarrito(e, productos){
+    console.log(productos);
+    console.log(e.target.id);
+ } 
