@@ -94,6 +94,7 @@ const mostrarInfoForm = formulario.addEventListener("submit", function (evento){
         prodCarrito.splice(indice, 1)
         actualizarCarrito()
     }
-    console.log(prod)
+
+    console.log(prodCarrito)
 
     carrito.addEventListener("click", eliminarDeCarrito);
